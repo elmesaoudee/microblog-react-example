@@ -18,7 +18,7 @@ class NavigationBar extends React.Component {
                         </li>
                     </ul>
                 </div>
-                <MessageNumberContainer/>
+                <MessageNumberContainer />
             </div>
         );
     }
