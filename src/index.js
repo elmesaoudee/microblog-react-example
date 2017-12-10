@@ -6,10 +6,15 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import messagesReducer from './Store/MessagesReducer';
 import logger from 'redux-logger';
 import reduxThunk from 'redux-thunk';
-import {composeWithDevTools} from 'redux-devtools-extension'
+import {composeWithDevTools} from 'redux-devtools-extension';
+import counterReducer from './Store/CounterReducer';
+import usersReducer from './Store/usersReducer'
+
 const routeReducer = combineReducers(
     {
-        messages: messagesReducer
+        messages: messagesReducer,
+        counter: counterReducer,
+        users: usersReducer,
     });
 
 const store = createStore(routeReducer, composeWithDevTools(applyMiddleware(logger, reduxThunk)));
